@@ -1,4 +1,4 @@
-package AssessmentTask1;
+package model;
 
 import java.util.Random;
 
