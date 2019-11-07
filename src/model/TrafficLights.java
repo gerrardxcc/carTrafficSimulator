@@ -1,4 +1,4 @@
-package AssessmentTask1;
+package model;
 
 public class TrafficLights{
     private float rateOfChange;
