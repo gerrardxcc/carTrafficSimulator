@@ -1,4 +1,4 @@
-package AssessmentTask1;
+package CarTrafficSimulator;
 
 import java.util.Random;
 

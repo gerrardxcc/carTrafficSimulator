@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="">
+    <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="TrafficeLights.java has been moved to model package">
+      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/SimulatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/TrafficLightView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/VehicleRectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Road.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/RoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/RoadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLights.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLightsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/ChengchengXiongA1.class.violet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Road.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/RoadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/TrafficLights.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/TrafficLightsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/ChengchengXiongA1.class.violet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/ChengchengXiongA1.class.violet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Road.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/RoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/RoadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/TrafficLightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/TrafficLightsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vehicle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,6 +59,7 @@
   <component name="ProjectId" id="1RwtoOqyo56zvNvN4QbBvSsDGq7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -30,9 +67,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents/IT@JCU/CP2406 Programming III/Java examples/TurnstileSimulator" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.idea" />
     </key>
@@ -49,23 +95,84 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AssessmentTask1.Main" />
+  <component name="RunManager" selected="Application.Controller">
+    <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller" />
+      <module name="carTrafficSimulator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="carTrafficSimulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AssessmentTask1.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulatorTest.loadCorrectData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="carTrafficSimulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
+      <option name="METHOD_NAME" value="loadCorrectData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulatorTest.saveCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="carTrafficSimulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
+      <option name="METHOD_NAME" value="saveCheck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulatorTest.saveSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="carTrafficSimulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
+      <option name="METHOD_NAME" value="saveSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Controller" />
+        <item itemvalue="JUnit.SimulatorTest.saveSuccessful" />
+        <item itemvalue="JUnit.SimulatorTest.saveCheck" />
+        <item itemvalue="JUnit.SimulatorTest" />
+        <item itemvalue="JUnit.SimulatorTest.loadCorrectData" />
       </list>
     </recent_temporary>
   </component>
@@ -82,6 +189,16 @@
       <workItem from="1570590163692" duration="1640000" />
       <workItem from="1570601172941" duration="6000" />
       <workItem from="1570601208340" duration="2000" />
+      <workItem from="1570601276720" duration="819000" />
+      <workItem from="1570625502845" duration="19000" />
+      <workItem from="1571668110969" duration="32000" />
+      <workItem from="1571814390181" duration="1045000" />
+      <workItem from="1571972098903" duration="2000" />
+      <workItem from="1571973332565" duration="382000" />
+      <workItem from="1571973810841" duration="53000" />
+      <workItem from="1571973880749" duration="4678000" />
+      <workItem from="1572577969202" duration="207000" />
+      <workItem from="1572578669956" duration="60566000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -118,11 +235,35 @@
       <option name="project" value="LOCAL" />
       <updated>1570601089599</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="carTrafficSimulator upload">
+      <created>1570601354762</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570601354762</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Main.java has been moved to model package">
+      <created>1573129291400</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573129291400</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TrafficeLights.java has been moved to model package">
+      <created>1573130214651</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573130214651</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -139,6 +280,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="carTrafficSimulator upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="carTrafficSimulator upload" />
+    <MESSAGE value="Main.java has been moved to model package" />
+    <MESSAGE value="TrafficeLights.java has been moved to model package" />
+    <option name="LAST_COMMIT_MESSAGE" value="TrafficeLights.java has been moved to model package" />
   </component>
 </project>

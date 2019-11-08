@@ -1,4 +1,4 @@
-package AssessmentTask1;
+package model;
 
 public class Road {
     private int length;
@@ -10,7 +10,7 @@ public class Road {
         return id;
     }
 
-    public Road(int length, int id){
+    public Road(int id, int length){
         this.length=length;
         this.id=id;
     }

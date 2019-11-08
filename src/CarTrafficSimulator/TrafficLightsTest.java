@@ -1,4 +1,5 @@
-package AssessmentTask1;
+package CarTrafficSimulator;
+import model.TrafficLights;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

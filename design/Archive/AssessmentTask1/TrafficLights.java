@@ -1,4 +1,4 @@
-package AssessmentTask1;
+package CarTrafficSimulator;
 
 public class TrafficLights{
     private float rateOfChange;
