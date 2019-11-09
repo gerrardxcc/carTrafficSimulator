@@ -44,6 +44,10 @@ public class MapView extends JPanel implements ActionListener {
         // for each roadRectangle in roadRectangles: draw(roadRectangle)
         for (RoadRectangle roadRectangle : roadRectangles){
             graphics2D.draw(roadRectangle);
+            graphics2D.setColor(Color.blue);
+        }
+        for (VehicleRectangle vehicleRectangle:roadRectangles){
+
         }
 
     }

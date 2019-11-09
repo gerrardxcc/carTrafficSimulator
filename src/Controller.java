@@ -32,6 +32,9 @@ public class Controller {
         mainFrame.addOpenActionListener(event -> {
             simulator.load("roads.csv");
         });
+        mainFrame.addOpenActionListener(event -> {
+            simulator.load("position.csv");
+        });
         mainFrame.addSaveActionListener(event -> {
             simulator.save("data.csv");
         });

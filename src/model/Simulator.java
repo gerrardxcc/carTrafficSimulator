@@ -28,9 +28,8 @@ public class Simulator {
 
             roads.clear();
 
-            Scanner scanner = new Scanner(new File(filename));
-
-
+            Scanner scanner = new Scanner(new File("roads.csv"));
+            Scanner scanner1 = new Scanner(new File("position.csv"));
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] words = line.split(",");
@@ -39,8 +38,17 @@ public class Simulator {
                 Road road = new Road(roadID, length);
                 roads.add(road);
             }
+            while (scanner1.hasNextLine()){
+                String line = scanner1.nextLine();
+                String[] words = line.split(",");
+                int roadID = Integer.parseInt(words[2]);
+                int length = Integer.parseInt(words[3]);
+                Road road = new Road(roadID,length);
+                roads.add(road);
+            }
 
             scanner.close();
+            scanner1.close();
             return true;
 
         } catch (IOException e) {
@@ -48,6 +56,7 @@ public class Simulator {
             return false;
         }
     }
+
 
     public boolean save(String filename) {
        try{
@@ -119,4 +128,6 @@ public class Simulator {
     }
 
 
+    public Road[] roads(String s) {
+    }
 }

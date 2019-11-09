@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="TrafficeLights.java has been moved to model package">
-      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/SimulatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TrafficLightView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/VehicleRectangle.java" afterDir="false" />
+    <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/RoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/RoadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLights.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/TrafficLightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/design/Archive/AssessmentTask1/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/ChengchengXiongA1.class.violet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Road.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/RoadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/TrafficLights.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/TrafficLightsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/AssessmentTask1/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/ChengchengXiongA1.class.violet.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/ChengchengXiongA1.class.violet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/RoadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/RoadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/TrafficLightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarTrafficSimulator/TrafficLightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AssessmentTask1/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Simulator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/SimulatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/MapView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SimulatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RoadRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/VehicleRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/VehicleRectangle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Controller">
+  <component name="RunManager" selected="JUnit.SimulatorTest.loadCorrectData">
     <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Controller" />
       <module name="carTrafficSimulator" />
@@ -168,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimulatorTest.loadCorrectData" />
+        <item itemvalue="JUnit.SimulatorTest" />
         <item itemvalue="Application.Controller" />
         <item itemvalue="JUnit.SimulatorTest.saveSuccessful" />
         <item itemvalue="JUnit.SimulatorTest.saveCheck" />
-        <item itemvalue="JUnit.SimulatorTest" />
-        <item itemvalue="JUnit.SimulatorTest.loadCorrectData" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +182,7 @@
       <workItem from="1571973810841" duration="53000" />
       <workItem from="1571973880749" duration="4678000" />
       <workItem from="1572577969202" duration="207000" />
-      <workItem from="1572578669956" duration="60566000" />
+      <workItem from="1572578669956" duration="68913000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -256,7 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573130214651</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="TrafficeLights.java has been moved to model package">
+      <created>1573200481837</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573200481837</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TrafficeLights.java has been moved to model package">
+      <created>1573217230025</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573217230026</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +277,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="carTrafficSimulator upload" />
     <MESSAGE value="Main.java has been moved to model package" />
     <MESSAGE value="TrafficeLights.java has been moved to model package" />

@@ -1,5 +1,7 @@
 package model;
 
+import model.Road;
+import model.Simulator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,7 +31,7 @@ class SimulatorTest {
         Simulator simulator = new Simulator();
         boolean status = simulator.load("data.csv");
         assertTrue(status);
-        for (Road road : simulator.roads) {
+        for (Road road : simulator.roads("data.csv")) {
             System.out.println(road.getId() + " " + road.getLength());
         }
 
