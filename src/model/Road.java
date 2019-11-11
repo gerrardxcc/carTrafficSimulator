@@ -32,4 +32,9 @@ public class Road {
     public void setNextTrafficLight(TrafficLights nextTrafficLight){
         this.nextTrafficLight=nextTrafficLight;
     }
+
+    @Override
+    public String toString() {
+        return "" + id;
+    }
 }

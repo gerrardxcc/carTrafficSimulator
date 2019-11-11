@@ -26,15 +26,14 @@ class SimulatorTest {
     @Test
     void loadCorrectData() {
         // testing the data.csv file for 2 roads, and they are:
-        // roadID == 1, roadLength == 4
-        // roadID == 2, roadLength == 5
+        // roadID == 1, roadLength == 4, nextID == 2
+        // roadID == 2, roadLength == 5, nextID == "n"
         Simulator simulator = new Simulator();
         boolean status = simulator.load("data.csv");
         assertTrue(status);
         for (Road road : simulator.roads("data.csv")) {
-            System.out.println(road.getId() + " " + road.getLength());
+            System.out.println(road.getId() + " " + road.getLength() + " " + road.getNextRoad());
         }
-
     }
 
 

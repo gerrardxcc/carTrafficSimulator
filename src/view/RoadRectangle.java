@@ -10,7 +10,7 @@ public class RoadRectangle extends Rectangle {
     public RoadRectangle(Road road) {
         this.road = road;
         width = road.getLength() * 10;
-        height = 10;
+        height = 20;
         x = y = 0;
     }
 

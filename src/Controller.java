@@ -3,6 +3,7 @@ import model.Simulator;
 import view.MainFrame;
 import view.MapView;
 import view.RoadRectangle;
+import view.TrafficLightView;
 
 import java.awt.*;
 import java.io.File;
@@ -14,11 +15,11 @@ public class Controller {
 
         Simulator simulator = new Simulator();
 
-        Road road = new Road(10,1);//c
-        RoadRectangle roadRectangle = new RoadRectangle(road);//c
-
         MapView mapView = new MapView();//c
-        mainFrame.add(mapView, BorderLayout.CENTER);//c add mapveiw to mainframe
+        mapView.setSimulator(simulator);
+        mapView.load("positions.csv");
+
+        mainFrame.add(mapView, BorderLayout.CENTER);//c add mapview to mainframe
 
         mainFrame.pack();
 
@@ -27,17 +28,16 @@ public class Controller {
 
         mainFrame.setVisible(true); //c
         mainFrame.addNewActionListener(event ->{
+            simulator.getNewCity();
+        });
 
-        });
         mainFrame.addOpenActionListener(event -> {
-            simulator.load("roads.csv");
-        });
-        mainFrame.addOpenActionListener(event -> {
-            simulator.load("position.csv");
+            simulator.load("data.csv");
         });
         mainFrame.addSaveActionListener(event -> {
             simulator.save("data.csv");
         });
+
         mainFrame.addExitActionListener(event ->System.exit(0) );
     }
 

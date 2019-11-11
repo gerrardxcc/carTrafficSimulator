@@ -13,7 +13,6 @@ public class TrafficLightView extends Rectangle {
         this.trafficLights =trafficLights;
         width = 5;
         height = 6;
-
     }
 
 

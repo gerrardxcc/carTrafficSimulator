@@ -14,6 +14,9 @@ public class Simulator {
     private int save;
     private int exit;
     List<Road> roads;
+    // traffic lights
+    // vehicles
+
 
 
     //constructor - create empty list of road objects
@@ -23,13 +26,17 @@ public class Simulator {
         roads = new ArrayList<>();
     }
 
-    public boolean load(String filename) {
+    public Road getRoad(int i) {
+        return roads.get(i);
+    }
+
+    public boolean load(String fileName) {
         try {
 
             roads.clear();
 
-            Scanner scanner = new Scanner(new File("roads.csv"));
-            Scanner scanner1 = new Scanner(new File("position.csv"));
+            // part 1 - create roads
+            Scanner scanner = new Scanner(new File(fileName));
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] words = line.split(",");
@@ -38,17 +45,25 @@ public class Simulator {
                 Road road = new Road(roadID, length);
                 roads.add(road);
             }
-            while (scanner1.hasNextLine()){
-                String line = scanner1.nextLine();
-                String[] words = line.split(",");
-                int roadID = Integer.parseInt(words[2]);
-                int length = Integer.parseInt(words[3]);
-                Road road = new Road(roadID,length);
-                roads.add(road);
-            }
-
             scanner.close();
-            scanner1.close();
+
+            // part 2 - connect roads
+            int i=0;
+
+            scanner = new Scanner(new File(fileName));
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] words = line.split(",");
+                if(words[2].equals("n")){
+                    ++i;
+                    continue;
+                }
+                int nextID = Integer.parseInt(words[2]);
+                Road road  = roads.get(i++);
+                road.setNextRoad(roads.get(nextID-1));
+            }
+            scanner.close();
+
             return true;
 
         } catch (IOException e) {
@@ -58,9 +73,10 @@ public class Simulator {
     }
 
 
+
     public boolean save(String filename) {
        try{
-           File file = new File(filename);
+           File file = new File("");
            PrintWriter printWriter = new PrintWriter(new FileWriter(filename));
            for (Road road:roads){
                printWriter.println(road.getId()+","+road.getLength());
@@ -77,23 +93,6 @@ public class Simulator {
 
 
     }
-
-
-    // load()
-    //  clear the list
-    //  open the file
-    //  read each line of the file
-    //  create a road object based on the id and road length
-    //  save that road object into the roads list
-    //  close the file
-
-
-    // save()
-    //  open the file for writing
-    //  for each road in roads:
-    //      write the road id and road length comma-separated
-    //  close file
-
 
     public void setNewCity(int newCity) {
         this.newCity = newCity;
@@ -128,6 +127,7 @@ public class Simulator {
     }
 
 
-    public Road[] roads(String s) {
+    public List<Road> roads(String s) {
+        return roads;
     }
 }

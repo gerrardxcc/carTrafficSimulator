@@ -1,5 +1,4 @@
 package view;
-import model.Road;
 
 import javax.swing.*;
 import java.awt.*;
