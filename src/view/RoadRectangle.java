@@ -14,6 +14,8 @@ public class RoadRectangle extends Rectangle {
         x = y = 0;
     }
 
-
+    public int getID() {
+        return road.getId();
+    }
 
 }

@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/positions.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roads.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Road.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Road.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/SimulatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/SimulatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/RoadRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/RoadRectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/TrafficLightView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/TrafficLightView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Road.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Road.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SimulatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SimulatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/RoadRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/TrafficLightView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/TrafficLightView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +178,7 @@
       <workItem from="1571973810841" duration="53000" />
       <workItem from="1571973880749" duration="4678000" />
       <workItem from="1572577969202" duration="207000" />
-      <workItem from="1572578669956" duration="96002000" />
+      <workItem from="1572578669956" duration="100009000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -269,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573275722008</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="created load and save in Simulator.java and MapView.java">
+      <created>1573473612955</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573473612955</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +293,7 @@
     <MESSAGE value="Main.java has been moved to model package" />
     <MESSAGE value="TrafficeLights.java has been moved to model package" />
     <MESSAGE value="load new csv file in simulator.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="load new csv file in simulator.java" />
+    <MESSAGE value="created load and save in Simulator.java and MapView.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="created load and save in Simulator.java and MapView.java" />
   </component>
 </project>

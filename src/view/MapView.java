@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -23,7 +25,6 @@ public class MapView extends JPanel implements ActionListener {
     List<RoadRectangle> roadRectangles;
     List<TrafficLightView>trafficLightViews;
     List<VehicleRectangle>vehicleRectangles;
-
 
 
     public void setSimulator(Simulator simulator) {
@@ -57,10 +58,9 @@ public class MapView extends JPanel implements ActionListener {
     }
     public boolean save(String filename) {
         try{
-            File file = new File("");
             PrintWriter printWriter = new PrintWriter(new FileWriter(filename));
             for (RoadRectangle roadRectangle:roadRectangles){
-                printWriter.println(roadRectangle.width+","+roadRectangle.height);
+                printWriter.println(roadRectangle.getID()+","+roadRectangle.x+","+roadRectangle.y);
             }
             printWriter.close();
 
@@ -113,6 +113,4 @@ public class MapView extends JPanel implements ActionListener {
 
 
     }
-
-
 }
