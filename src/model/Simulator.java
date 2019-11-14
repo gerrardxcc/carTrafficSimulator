@@ -94,6 +94,7 @@ public class Simulator {
 
     }
 
+
     public void setNewCity(int newCity) {
         this.newCity = newCity;
     }

@@ -7,10 +7,7 @@ import model.TrafficLights;
 import javax.swing.*;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -84,6 +81,15 @@ public class MapView extends JPanel implements ActionListener {
         trafficLightViews = new ArrayList<>();
         vehicleRectangles = new ArrayList<>();
     }
+    public RoadRectangle roadSelect(Point point) {
+        for(RoadRectangle roadRectangle: roadRectangles){
+            if (roadRectangle.contains(point)) {
+                return roadRectangle;
+            }
+        }
+
+        return null;
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -100,6 +106,7 @@ public class MapView extends JPanel implements ActionListener {
         for (RoadRectangle roadRectangle : roadRectangles){
           graphics.setColor(Color.black);
           graphics2D.draw(roadRectangle);
+
         }
         for (VehicleRectangle vehicleRectangle:vehicleRectangles){
             graphics2D.setColor(Color.blue);

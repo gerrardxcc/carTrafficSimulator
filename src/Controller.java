@@ -6,12 +6,13 @@ import view.RoadRectangle;
 import view.TrafficLightView;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.PrintWriter;
 
 public class Controller {
+    static RoadRectangle selected;
+
     public static void main(String[] args) {
         MainFrame mainFrame = new MainFrame();
 
@@ -45,19 +46,54 @@ public class Controller {
         KeyListener keyListener = new KeyListener(){
 
             public void keyPressed(KeyEvent event){
-                printEventInfo("Key Pressed",event);
+//                printEventInfo("Key Pressed",event);
             }
 
 
             public void keyReleased(KeyEvent event) {
 
-                printEventInfo("Key Released", event);
+//                printEventInfo("Key Released", event);
+
+
+                System.out.println("key released: " + event.getKeyCode());
+
+                if (event.getKeyCode() == 37){
+                    if (selected != null){
+                        selected.translate(-10,0);
+                    }
+                }
+                if (event.getKeyCode() == 38){
+                    if (selected != null){
+                        selected.translate(0,-10);
+                    }
+                }
+                if (event.getKeyCode() == 39){
+                    if (selected != null){
+                        selected.translate(+10,0);
+                    }
+                }
+                if (event.getKeyCode() == 40){
+                    if (selected != null){
+                        selected.translate(0,+10);
+                    }
+                }
+                if (event.getKeyCode()== 45){
+                    if(selected !=null){
+                        selected.shrink();
+
+                    }
+                }
+                if (event.getKeyCode()== 61){
+                    if(selected !=null){
+                        selected.grow();
+                    }
+                }
 
             }
 
             public void keyTyped(KeyEvent event) {
 
-                printEventInfo("Key Typed", event);
+//                printEventInfo("Key Typed", event);
 
             }
 
@@ -117,9 +153,21 @@ public class Controller {
 
         };
 
+        MouseListener mouseListener = new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent event) {
+                System.out.println(event.getPoint());
+                // todo: for each roadrectangle in roadrectangles
+                //  if roadrectangle contains the mouse point then
+
+                selected = mapView.roadSelect(event.getPoint());
+                System.out.println("Select" + selected);
+            }
+        };
+
         mapView.setFocusable(true);
         mapView.addKeyListener(keyListener);
-
+        mapView.addMouseListener(mouseListener);
 
 
     }

@@ -9,8 +9,8 @@ public class RoadRectangle extends Rectangle {
 
     public RoadRectangle(Road road) {
         this.road = road;
-        width = road.getLength() * 10;
-        height = 20;
+        updateSize();
+        height = 30;
         x = y = 0;
     }
 
@@ -18,4 +18,16 @@ public class RoadRectangle extends Rectangle {
         return road.getId();
     }
 
+    public void grow() {
+        road.setLength(road.getLength() + 1);
+        updateSize();
+    }
+    public void shrink(){
+        road.setLength(road.getLength() - 1);
+        updateSize();
+    }
+
+    private void updateSize() {
+        width = road.getLength() * 30;
+    }
 }
