@@ -1,14 +1,10 @@
-import model.Road;
 import model.Simulator;
 import view.MainFrame;
 import view.MapView;
 import view.RoadRectangle;
-import view.TrafficLightView;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.PrintWriter;
 
 public class Controller {
     static RoadRectangle selected;
@@ -30,7 +26,7 @@ public class Controller {
 
 
         mainFrame.setVisible(true); //c
-        mainFrame.addNewActionListener(event ->{
+        mainFrame.addNewActionListener(event -> {
             simulator.getNewCity();
         });
 
@@ -41,13 +37,13 @@ public class Controller {
             simulator.save("data.csv");
         });
 
-        mainFrame.addExitActionListener(event ->System.exit(0) );
+        mainFrame.addExitActionListener(event -> System.exit(0));
         mainFrame.addStartActionListener(e -> mapView.startSimulation());
         mainFrame.addStopActionListener(e -> mapView.stopSimulation());
 
-        KeyListener keyListener = new KeyListener(){
+        KeyListener keyListener = new KeyListener() {
 
-            public void keyPressed(KeyEvent event){
+            public void keyPressed(KeyEvent event) {
 //                printEventInfo("Key Pressed",event);
             }
 
@@ -59,34 +55,34 @@ public class Controller {
 
                 System.out.println("key released: " + event.getKeyCode());
 
-                if (event.getKeyCode() == 37){
-                    if (selected != null){
-                        selected.translate(-10,0);
+                if (event.getKeyCode() == 37) {
+                    if (selected != null) {
+                        selected.translate(-10, 0);
                     }
                 }
-                if (event.getKeyCode() == 38){
-                    if (selected != null){
-                        selected.translate(0,-10);
+                if (event.getKeyCode() == 38) {
+                    if (selected != null) {
+                        selected.translate(0, -10);
                     }
                 }
-                if (event.getKeyCode() == 39){
-                    if (selected != null){
-                        selected.translate(+10,0);
+                if (event.getKeyCode() == 39) {
+                    if (selected != null) {
+                        selected.translate(+10, 0);
                     }
                 }
-                if (event.getKeyCode() == 40){
-                    if (selected != null){
-                        selected.translate(0,+10);
+                if (event.getKeyCode() == 40) {
+                    if (selected != null) {
+                        selected.translate(0, +10);
                     }
                 }
-                if (event.getKeyCode()== 45){
-                    if(selected !=null){
+                if (event.getKeyCode() == 45) {
+                    if (selected != null) {
                         selected.shrink();
 
                     }
                 }
-                if (event.getKeyCode()== 61){
-                    if(selected !=null){
+                if (event.getKeyCode() == 61) {
+                    if (selected != null) {
                         selected.grow();
                     }
                 }

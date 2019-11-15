@@ -30,6 +30,7 @@ public class Simulator {
 
     public Simulator() {
         roads = new ArrayList<>();
+        vehicles = new ArrayList<>();
     }
 
 
@@ -101,22 +102,35 @@ public class Simulator {
     public void start(){
         vehicles.clear();
     }
+
     public void update(){
+
+        // add new vehicle 20% of the time
         Random random = new Random();
-        int rand_int1 = random.nextInt(100);
-        if (rand_int1 <= 20){
+        int value = random.nextInt(100);
+        if (value <= 20){
             Vehicle vehicle = new Vehicle(roads.get(0));
             vehicles.add(vehicle);
-
         }
+
+        // remove inactive vehicles
+        for (int i = 0; i < vehicles.size(); ++i) {
+            if (!vehicles.get(i).getIsActive()) {
+                vehicles.remove(i);
+                --i;
+            }
+        }
+
+        // update all vehicles
         for (Vehicle vehicle : vehicles){
             vehicle.update();
         }
 
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
+        }
+        System.out.println();
     }
-
-
-
 
     public void setNewCity(int newCity) {
         this.newCity = newCity;
