@@ -17,6 +17,11 @@ public class VehicleRectangle extends Rectangle {
         x=y=0;
 
     }
+    public void move(){
+        vehicle.update();
+
+    }
+
 
 
 }

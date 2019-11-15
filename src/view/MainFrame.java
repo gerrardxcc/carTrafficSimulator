@@ -10,16 +10,18 @@ public class MainFrame extends JFrame implements ActionListener{ // extend JFram
     private JMenuItem open;
     private JMenuItem save;
     private JMenuItem exit;
+    private JMenuItem s1;
+    private JMenuItem s2;
 
     public MainFrame(){
         super("CarTrafficSimulator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenuBar menuBar = new JMenuBar();
         JMenu city = new JMenu("City editing");
-        JMenu simulation = new JMenu("Simulation");
+        JMenu simulator = new JMenu("Simulator");
 
         menuBar.add(city);
-        menuBar.add(simulation);
+        menuBar.add(simulator);
 
         n1 = new JMenuItem("New city");
         open = new JMenuItem("Open a city");
@@ -29,6 +31,12 @@ public class MainFrame extends JFrame implements ActionListener{ // extend JFram
         city.add(open);
         city.add(save);
         city.add(exit);
+
+        // setup simulator menu with menuitems
+        s1 = new JMenuItem("Start");
+        s2 = new JMenuItem("Stop");
+        simulator.add(s1);
+        simulator.add(s2);
 
 
         JPanel bottomPanel = new JPanel();
@@ -54,6 +62,12 @@ public class MainFrame extends JFrame implements ActionListener{ // extend JFram
     }
     public void addExitActionListener(ActionListener listener) {
         exit.addActionListener(listener);
+    }
+    public void addStartActionListener(ActionListener listener){
+        s1.addActionListener(listener);
+    }
+    public void addStopActionListener(ActionListener listener){
+        s2.addActionListener(listener);
     }
 
     @Override

@@ -25,7 +25,7 @@ public class Vehicle{
     public void setCurrentOn(Road currentOn) {
         this.currentOn = currentOn;
     }
-    public void Update(){
+    public void update(){
         this.vehiclePosition += speed;
     }
 

@@ -4,20 +4,20 @@ import model.Road;
 import model.Simulator;
 import model.TrafficLights;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class MapView extends JPanel implements ActionListener {
     Simulator simulator;
+    private boolean running;
 
     List<RoadRectangle> roadRectangles;
     List<TrafficLightView>trafficLightViews;
@@ -28,6 +28,10 @@ public class MapView extends JPanel implements ActionListener {
         this.simulator = simulator;
         simulator.load("roads.csv");
     }
+    public void run(){
+
+    }
+
 
     public boolean load(String filename) {
         roadRectangles.clear();
@@ -91,8 +95,12 @@ public class MapView extends JPanel implements ActionListener {
         return null;
     }
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (running = true){
+            simulator.update();
+        }
         repaint();
     }
 
@@ -104,20 +112,34 @@ public class MapView extends JPanel implements ActionListener {
 //        graphics2D.draw(roadRectangle);
         // for each roadRectangle in roadRectangles: draw(roadRectangle)
         for (RoadRectangle roadRectangle : roadRectangles){
-          graphics.setColor(Color.black);
-          graphics2D.draw(roadRectangle);
-
+          graphics.setColor(Color.gray);
+          graphics2D.fill(roadRectangle);
         }
         for (VehicleRectangle vehicleRectangle:vehicleRectangles){
             graphics2D.setColor(Color.blue);
-            graphics2D.draw(vehicleRectangle);
+            graphics2D.fill(vehicleRectangle);
         }
         for(TrafficLightView trafficLightView:trafficLightViews){
             graphics2D.setColor(Color.green);
-            graphics2D.draw(trafficLightView);
+            graphics2D.fill(trafficLightView);
         }
 
 
 
     }
+
+    public void startSimulation(){
+        vehicleRectangles.clear();
+        simulator.update();
+        if (running = true){
+            simulator.start();
+        }
+
+    }
+    public void stopSimulation(){
+        running = false;
+    }
+
+
 }
+

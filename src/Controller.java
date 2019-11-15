@@ -42,6 +42,8 @@ public class Controller {
         });
 
         mainFrame.addExitActionListener(event ->System.exit(0) );
+        mainFrame.addStartActionListener(e -> mapView.startSimulation());
+        mainFrame.addStopActionListener(e -> mapView.stopSimulation());
 
         KeyListener keyListener = new KeyListener(){
 

@@ -1,11 +1,14 @@
 package model;
 
+import view.VehicleRectangle;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Simulator {
@@ -14,6 +17,9 @@ public class Simulator {
     private int save;
     private int exit;
     List<Road> roads;
+    List<Vehicle>vehicles;
+    private int s1;
+    private int s2;
     // traffic lights
     // vehicles
 
@@ -25,6 +31,7 @@ public class Simulator {
     public Simulator() {
         roads = new ArrayList<>();
     }
+
 
     public Road getRoad(int i) {
         return roads.get(i);
@@ -72,8 +79,6 @@ public class Simulator {
         }
     }
 
-
-
     public boolean save(String filename) {
        try{
            File file = new File("");
@@ -93,6 +98,24 @@ public class Simulator {
 
 
     }
+    public void start(){
+        vehicles.clear();
+    }
+    public void update(){
+        Random random = new Random();
+        int rand_int1 = random.nextInt(100);
+        if (rand_int1 <= 20){
+            Vehicle vehicle = new Vehicle(roads.get(0));
+            vehicles.add(vehicle);
+
+        }
+        for (Vehicle vehicle : vehicles){
+            vehicle.update();
+        }
+
+    }
+
+
 
 
     public void setNewCity(int newCity) {
@@ -101,14 +124,6 @@ public class Simulator {
 
     public int getNewCity() {
         return newCity;
-    }
-
-    public void setStart(int start) {
-        this.start = start;
-    }
-
-    public int getStart() {
-        return start;
     }
 
     public void setSave(int save) {
@@ -130,5 +145,29 @@ public class Simulator {
 
     public List<Road> roads(String s) {
         return roads;
+    }
+
+    public List<Road> getRoads() {
+        return roads;
+    }
+
+    public void setRoads(List<Road> roads) {
+        this.roads = roads;
+    }
+
+    public void setS1(int s1) {
+        this.s1 = s1;
+    }
+
+    public void setS2(int s2) {
+        this.s2 = s2;
+    }
+
+    public int getS1() {
+        return s1;
+    }
+
+    public int getS2() {
+        return s2;
     }
 }

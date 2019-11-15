@@ -27,7 +27,7 @@ public class Main {
                 System.out.print("TrafficLight is RED, ");
                 System.out.println("Car is stop.");
             }
-            vehicle.Update();
+            vehicle.update();
 
         }
 
