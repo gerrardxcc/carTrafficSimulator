@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/positions.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/roads.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newFile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/other.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/positions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/positions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roads.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roads.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RoadRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/VehicleRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/VehicleRectangle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +99,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Student" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Student" />
       <module name="carTrafficSimulator" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +108,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulatorTest.loadCorrectData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="jjj" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.jjj" />
       <module name="carTrafficSimulator" />
       <extension name="coverage">
         <pattern>
@@ -116,15 +121,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
-      <option name="METHOD_NAME" value="loadCorrectData" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulatorTest.saveCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ttt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.ttt" />
       <module name="carTrafficSimulator" />
       <extension name="coverage">
         <pattern>
@@ -132,15 +134,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
-      <option name="METHOD_NAME" value="saveCheck" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulatorTest.saveSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="tttt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.tttt" />
       <module name="carTrafficSimulator" />
       <extension name="coverage">
         <pattern>
@@ -148,10 +147,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.SimulatorTest" />
-      <option name="METHOD_NAME" value="saveSuccessful" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,10 +154,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Controller" />
-        <item itemvalue="JUnit.SimulatorTest.loadCorrectData" />
-        <item itemvalue="JUnit.SimulatorTest" />
-        <item itemvalue="JUnit.SimulatorTest.saveSuccessful" />
-        <item itemvalue="JUnit.SimulatorTest.saveCheck" />
+        <item itemvalue="Application.Student" />
+        <item itemvalue="Application.jjj" />
+        <item itemvalue="Application.tttt" />
+        <item itemvalue="Application.ttt" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +185,7 @@
       <workItem from="1572577969202" duration="207000" />
       <workItem from="1572578669956" duration="102520000" />
       <workItem from="1573621773187" duration="242000" />
-      <workItem from="1573623165069" duration="26486000" />
+      <workItem from="1573623165069" duration="41545000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -297,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573802328142</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add start, update methods to simulator.java and MapView.java. add move method to VehicleRectangle.java">
+      <created>1573805049741</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573805049741</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +339,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Controller.java</url>
-          <line>55</line>
+          <line>58</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

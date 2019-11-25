@@ -30,4 +30,8 @@ public class RoadRectangle extends Rectangle {
     private void updateSize() {
         width = road.getLength() * 30;
     }
+
+    public Road getRoad() {
+        return road;
+    }
 }

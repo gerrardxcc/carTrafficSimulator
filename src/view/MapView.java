@@ -2,6 +2,7 @@ package view;
 
 import model.Road;
 import model.Simulator;
+import model.Vehicle;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +23,7 @@ public class MapView extends JPanel implements ActionListener {
     List<RoadRectangle> roadRectangles;
     List<TrafficLightView> trafficLightViews;
     List<VehicleRectangle> vehicleRectangles;
+
 
     //
 
@@ -100,12 +102,41 @@ public class MapView extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 //        System.out.println("running is " + running);
         if (running) {
+            Vehicle vehicle = simulator.spawnVehicle();
+            if (vehicle != null) {
+                VehicleRectangle vehicleRectangle = new VehicleRectangle(vehicle);
+                vehicleRectangles.add(vehicleRectangle);
+
+                // TODO get the roadrectangle for the vehicle's road
+                // TODO then, use the roadrectangle's x,y to set the position of the vehiclerectangle
+                for (RoadRectangle roadRectangle : roadRectangles) {
+                    if (roadRectangle.getRoad() == vehicle.getCurrentOn()) {
+                        vehicleRectangle.setLocation(roadRectangle.getLocation());
+                        vehicleRectangle.setRoadRectangle(roadRectangle);
+                        break;
+                    }
+                }
+                // if not found - then something went wrong :)
+            }
+
             simulator.update();
-            // move vehicle rectangles
+            setVehiclePositions();
+
+            // TODO for any inactive vehicle in the simulator delete the corresponding vehcilerectangle here in mapview
+            List<Vehicle> inactives = simulator.getInactiveVehicles();
+            // for each inactive in inactives find it's vehicleRectangle and remove it from vehicleRectangles;
         }
         repaint();
     }
 
+
+    private void setVehiclePositions() {
+        for (VehicleRectangle vehicleRectangle : vehicleRectangles) {
+            Vehicle vehicle = vehicleRectangle.getVehicle();
+            RoadRectangle roadRectangle = vehicleRectangle.getRoadRectangle();
+            vehicleRectangle.setLocation((int)(vehicle.getVehiclePosition() + roadRectangle.getX()), (int)roadRectangle.getY());
+        }
+    }
 
     @Override
     protected void paintComponent(Graphics graphics) {

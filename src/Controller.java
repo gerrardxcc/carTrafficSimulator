@@ -16,7 +16,7 @@ public class Controller {
 
         MapView mapView = new MapView();//c
         mapView.setSimulator(simulator);
-        mapView.load("positions.csv");
+//        mapView.load("positions.csv");
 
         mainFrame.add(mapView, BorderLayout.CENTER);//c add mapview to mainframe
 
@@ -31,10 +31,13 @@ public class Controller {
         });
 
         mainFrame.addOpenActionListener(event -> {
-            simulator.load("data.csv");
+            simulator.load("roads.csv");
+            mapView.load("positions.csv");
         });
+
         mainFrame.addSaveActionListener(event -> {
-            simulator.save("data.csv");
+            simulator.save("roads.csv");
+            mapView.save("positions.csv");
         });
 
         mainFrame.addExitActionListener(event -> System.exit(0));

@@ -85,10 +85,13 @@ public class Simulator {
            File file = new File("");
            PrintWriter printWriter = new PrintWriter(new FileWriter(filename));
            for (Road road:roads){
-               printWriter.println(road.getId()+","+road.getLength());
+               if (road.getNextRoad() == null){
+                   printWriter.println(road.getId()+","+road.getLength()+",n");
+               }
+               else
+               printWriter.println(road.getId()+","+road.getLength()+","+road.getNextRoad().getId());
            }
            printWriter.close();
-
 
            return true;
 
@@ -103,16 +106,25 @@ public class Simulator {
         vehicles.clear();
     }
 
-    public void update(){
-
+    public Vehicle spawnVehicle() {
         // add new vehicle 20% of the time
         Random random = new Random();
         int value = random.nextInt(100);
-        if (value <= 20){
+        if (value <= 20) {
             Vehicle vehicle = new Vehicle(roads.get(0));
             vehicles.add(vehicle);
+            return vehicle;
         }
+        return null;
+    }
 
+    public List<Vehicle> getInactiveVehicles() {
+        // create a new empty list of Vehicle type objects
+        // for each vehicle in vehicles, if it is inactive, then add to the empty list
+        // return the list
+    }
+
+    public void destroyInactiveVehicles() {
         // remove inactive vehicles
         for (int i = 0; i < vehicles.size(); ++i) {
             if (!vehicles.get(i).getIsActive()) {
@@ -120,16 +132,18 @@ public class Simulator {
                 --i;
             }
         }
+    }
 
+    public void update(){
         // update all vehicles
         for (Vehicle vehicle : vehicles){
             vehicle.update();
         }
 
-        for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
-        }
-        System.out.println();
+//        for (Vehicle vehicle : vehicles) {
+//            System.out.println(vehicle);
+//        }
+//        System.out.println();
     }
 
     public void setNewCity(int newCity) {
