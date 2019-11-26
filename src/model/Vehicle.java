@@ -26,6 +26,7 @@ public class Vehicle{
     public void setCurrentOn(Road currentOn) {
         this.currentOn = currentOn;
     }
+
     public void update(){
         // if position is at the end of the current road then goto the next road
         if (vehiclePosition >= currentOn.getLength()) {

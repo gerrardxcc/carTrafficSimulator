@@ -77,7 +77,7 @@ public class MapView extends JPanel implements ActionListener {
     }
 
     public MapView() {
-        Timer timer = new Timer(24, this);
+        Timer timer = new Timer(10, this);
         timer.start();
 
         setPreferredSize(new Dimension(1000, 500));
@@ -100,19 +100,18 @@ public class MapView extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        System.out.println("running is " + running);
+        System.out.println("running is " + running);
         if (running) {
             Vehicle vehicle = simulator.spawnVehicle();
             if (vehicle != null) {
+                System.out.println("Created vehicle rectangle");
                 VehicleRectangle vehicleRectangle = new VehicleRectangle(vehicle);
                 vehicleRectangles.add(vehicleRectangle);
 
-                // TODO get the roadrectangle for the vehicle's road
-                // TODO then, use the roadrectangle's x,y to set the position of the vehiclerectangle
                 for (RoadRectangle roadRectangle : roadRectangles) {
                     if (roadRectangle.getRoad() == vehicle.getCurrentOn()) {
-                        vehicleRectangle.setLocation(roadRectangle.getLocation());
                         vehicleRectangle.setRoadRectangle(roadRectangle);
+                        System.out.println("vehicle " + vehicle + " set to be on road rectangle: " + roadRectangle);
                         break;
                     }
                 }
@@ -125,7 +124,19 @@ public class MapView extends JPanel implements ActionListener {
             // TODO for any inactive vehicle in the simulator delete the corresponding vehcilerectangle here in mapview
             List<Vehicle> inactives = simulator.getInactiveVehicles();
             // for each inactive in inactives find it's vehicleRectangle and remove it from vehicleRectangles;
+            List<VehicleRectangle> inactiveVehicleRectangles = new ArrayList<>();
+            for (VehicleRectangle vehicleRectangle : vehicleRectangles) {
+                if (inactives.contains(vehicleRectangle.getVehicle())) {
+                    inactiveVehicleRectangles.add(vehicleRectangle);
+                }
+            }
+
+            for (VehicleRectangle inactiveVehicleRectangle : inactiveVehicleRectangles) {
+                vehicleRectangles.remove(inactiveVehicleRectangle);
+            }
+
         }
+
         repaint();
     }
 
@@ -134,7 +145,7 @@ public class MapView extends JPanel implements ActionListener {
         for (VehicleRectangle vehicleRectangle : vehicleRectangles) {
             Vehicle vehicle = vehicleRectangle.getVehicle();
             RoadRectangle roadRectangle = vehicleRectangle.getRoadRectangle();
-            vehicleRectangle.setLocation((int)(vehicle.getVehiclePosition() + roadRectangle.getX()), (int)roadRectangle.getY());
+            vehicleRectangle.setLocation((int) (vehicle.getVehiclePosition() + roadRectangle.getX()), (int) roadRectangle.getY());
         }
     }
 

@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6aea689-015c-45bd-9ae1-ebc78d436517" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/positions.bak" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roads.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newFile.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/other.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Simulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Simulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/model/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/MapView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/MapView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/RoadRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/RoadRectangle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/carTrafficSimulator/view/VehicleRectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/positions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/positions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roads.csv" beforeDir="false" afterPath="$PROJECT_DIR$/roads.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/MapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MapView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/RoadRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RoadRectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/VehicleRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/VehicleRectangle.java" afterDir="false" />
@@ -185,7 +186,7 @@
       <workItem from="1572577969202" duration="207000" />
       <workItem from="1572578669956" duration="102520000" />
       <workItem from="1573621773187" duration="242000" />
-      <workItem from="1573623165069" duration="41545000" />
+      <workItem from="1573623165069" duration="47189000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -299,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573805049741</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add start, update methods to simulator.java and MapView.java. add move method to VehicleRectangle.java">
+      <created>1574669450071</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574669450071</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add start, update methods to simulator.java and MapView.java. add move method to VehicleRectangle.java">
+      <created>1574669493868</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1574669493868</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,9 +353,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/model/Vehicle.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

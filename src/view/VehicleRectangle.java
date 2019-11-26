@@ -12,7 +12,7 @@ public class VehicleRectangle extends Rectangle {
     public VehicleRectangle(Vehicle vehicle) {
         this.vehicle = vehicle;
         width = vehicle.getVehicleLength() * 4;
-        height = 2;
+        height = 20;
     }
 
     public RoadRectangle currentOnRectangle() {

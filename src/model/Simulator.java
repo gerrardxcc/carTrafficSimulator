@@ -6,10 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Simulator {
     private int newCity;
@@ -112,6 +109,7 @@ public class Simulator {
         int value = random.nextInt(100);
         if (value <= 20) {
             Vehicle vehicle = new Vehicle(roads.get(0));
+            vehicle.setVehicleLength(2);
             vehicles.add(vehicle);
             return vehicle;
         }
@@ -122,7 +120,18 @@ public class Simulator {
         // create a new empty list of Vehicle type objects
         // for each vehicle in vehicles, if it is inactive, then add to the empty list
         // return the list
+
+        List<Vehicle> inactives = new ArrayList<>();
+
+        for (Vehicle vehicle : vehicles) {
+            if (!vehicle.getIsActive()) {
+                inactives.add(vehicle);
+            }
+        }
+
+        return inactives;
     }
+
 
     public void destroyInactiveVehicles() {
         // remove inactive vehicles
@@ -140,10 +149,10 @@ public class Simulator {
             vehicle.update();
         }
 
-//        for (Vehicle vehicle : vehicles) {
-//            System.out.println(vehicle);
-//        }
-//        System.out.println();
+        for (Vehicle vehicle : vehicles) {
+            System.out.println(vehicle);
+        }
+        System.out.println();
     }
 
     public void setNewCity(int newCity) {

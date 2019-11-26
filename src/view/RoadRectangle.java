@@ -10,7 +10,7 @@ public class RoadRectangle extends Rectangle {
     public RoadRectangle(Road road) {
         this.road = road;
         updateSize();
-        height = 30;
+        height = 80;
         x = y = 0;
     }
 
@@ -33,5 +33,10 @@ public class RoadRectangle extends Rectangle {
 
     public Road getRoad() {
         return road;
+    }
+
+    @Override
+    public String toString() {
+        return road.toString();
     }
 }
