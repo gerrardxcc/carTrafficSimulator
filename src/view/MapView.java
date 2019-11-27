@@ -44,8 +44,9 @@ public class MapView extends JPanel implements ActionListener {
                 int y = Integer.parseInt(words[2]);
 
                 Road road = simulator.getRoad(roadID - 1);
-                RoadRectangle roadRectangle = new RoadRectangle(road);
+                RoadRectangle roadRectangle = new RoadRectangle();
                 roadRectangle.setLocation(x, y);
+                roadRectangle.setRoad(road);
                 roadRectangles.add(roadRectangle);
             }
             scanner.close();
@@ -77,7 +78,7 @@ public class MapView extends JPanel implements ActionListener {
     }
 
     public MapView() {
-        Timer timer = new Timer(10, this);
+        Timer timer = new Timer(100, this);
         timer.start();
 
         setPreferredSize(new Dimension(1000, 500));
@@ -107,19 +108,7 @@ public class MapView extends JPanel implements ActionListener {
                 System.out.println("Created vehicle rectangle");
                 VehicleRectangle vehicleRectangle = new VehicleRectangle(vehicle);
                 vehicleRectangles.add(vehicleRectangle);
-
-                for (RoadRectangle roadRectangle : roadRectangles) {
-                    if (roadRectangle.getRoad() == vehicle.getCurrentOn()) {
-                        vehicleRectangle.setRoadRectangle(roadRectangle);
-                        System.out.println("vehicle " + vehicle + " set to be on road rectangle: " + roadRectangle);
-                        break;
-                    }
-                }
-                // if not found - then something went wrong :)
             }
-
-            simulator.update();
-            setVehiclePositions();
 
             // TODO for any inactive vehicle in the simulator delete the corresponding vehcilerectangle here in mapview
             List<Vehicle> inactives = simulator.getInactiveVehicles();
@@ -132,22 +121,31 @@ public class MapView extends JPanel implements ActionListener {
             }
 
             for (VehicleRectangle inactiveVehicleRectangle : inactiveVehicleRectangles) {
+                System.out.println("removing: " + inactiveVehicleRectangle.getVehicle());
                 vehicleRectangles.remove(inactiveVehicleRectangle);
             }
 
+            simulator.destroyInactiveVehicles();
+
+            synchroniseViewObjects();
+
+            simulator.update();
         }
 
         repaint();
     }
 
-
-    private void setVehiclePositions() {
+    private void synchroniseViewObjects() {
         for (VehicleRectangle vehicleRectangle : vehicleRectangles) {
             Vehicle vehicle = vehicleRectangle.getVehicle();
-            RoadRectangle roadRectangle = vehicleRectangle.getRoadRectangle();
-            vehicleRectangle.setLocation((int) (vehicle.getVehiclePosition() + roadRectangle.getX()), (int) roadRectangle.getY());
+            Road current = vehicle.getCurrentOn();
+            int roadID = current.getId();
+            RoadRectangle currentRoadRect = roadRectangles.get(roadID - 1);
+
+            vehicleRectangle.setLocation((int) (vehicle.getVehiclePosition()*RoadRectangle.SEGMENT_SIZE + currentRoadRect.getX()), (int) currentRoadRect.getY());
         }
     }
+
 
     @Override
     protected void paintComponent(Graphics graphics) {
@@ -155,14 +153,20 @@ public class MapView extends JPanel implements ActionListener {
         Graphics2D graphics2D = (Graphics2D) graphics;// downcast
 //        graphics2D.draw(roadRectangle);
         // for each roadRectangle in roadRectangles: draw(roadRectangle)
+        System.out.println("number of road rectangles: " + roadRectangles.size());
         for (RoadRectangle roadRectangle : roadRectangles) {
             graphics.setColor(Color.gray);
             graphics2D.fill(roadRectangle);
         }
+
+        System.out.println("number of vehicle rectangles: " + vehicleRectangles.size());
         for (VehicleRectangle vehicleRectangle : vehicleRectangles) {
             graphics2D.setColor(Color.blue);
             graphics2D.fill(vehicleRectangle);
+            System.out.println("vehicle " + vehicleRectangle.getVehicle() + " position: " + vehicleRectangle.getLocation());
         }
+
+        System.out.println("number of traffic light rectangles: " + trafficLightViews.size());
         for (TrafficLightView trafficLightView : trafficLightViews) {
             graphics2D.setColor(Color.green);
             graphics2D.fill(trafficLightView);

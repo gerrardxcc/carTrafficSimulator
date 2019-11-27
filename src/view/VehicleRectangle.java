@@ -11,7 +11,7 @@ public class VehicleRectangle extends Rectangle {
 
     public VehicleRectangle(Vehicle vehicle) {
         this.vehicle = vehicle;
-        width = vehicle.getVehicleLength() * 4;
+        width = vehicle.getVehicleLength() * 10;
         height = 20;
     }
 

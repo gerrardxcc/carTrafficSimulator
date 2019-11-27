@@ -108,7 +108,8 @@ public class Simulator {
         Random random = new Random();
         int value = random.nextInt(100);
         if (value <= 20) {
-            Vehicle vehicle = new Vehicle(roads.get(0));
+            int i = random.nextInt(roads.size());
+            Vehicle vehicle = new Vehicle(roads.get(i));
             vehicle.setVehicleLength(2);
             vehicles.add(vehicle);
             return vehicle;
@@ -149,10 +150,6 @@ public class Simulator {
             vehicle.update();
         }
 
-        for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
-        }
-        System.out.println();
     }
 
     public void setNewCity(int newCity) {

@@ -6,12 +6,20 @@ import java.awt.*;
 
 public class RoadRectangle extends Rectangle {
     private Road road;
+    public static final int SEGMENT_SIZE = 30;
 
-    public RoadRectangle(Road road) {
-        this.road = road;
-        updateSize();
+    public RoadRectangle() {
         height = 80;
         x = y = 0;
+    }
+
+    public void setRoad(Road road) {
+        this.road = road;
+        updateSize();
+    }
+
+    public Road getRoad(){
+        return road;
     }
 
     public int getID() {
@@ -22,17 +30,14 @@ public class RoadRectangle extends Rectangle {
         road.setLength(road.getLength() + 1);
         updateSize();
     }
+
     public void shrink(){
         road.setLength(road.getLength() - 1);
         updateSize();
     }
 
     private void updateSize() {
-        width = road.getLength() * 30;
-    }
-
-    public Road getRoad() {
-        return road;
+        width = road.getLength() * SEGMENT_SIZE;
     }
 
     @Override
