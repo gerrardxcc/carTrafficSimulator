@@ -224,7 +224,7 @@
       <workItem from="1574940915743" duration="149000" />
       <workItem from="1574941090805" duration="178000" />
       <workItem from="1574941291993" duration="569000" />
-      <workItem from="1574941886065" duration="2004000" />
+      <workItem from="1574941886065" duration="4245000" />
     </task>
     <task id="LOCAL-00001" summary="carTrafficSimulator upload">
       <created>1570590708026</created>
@@ -394,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574947759845</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="upload UML to design folder">
+      <created>1574948304725</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1574948304725</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
